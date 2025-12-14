@@ -40,6 +40,13 @@
             background: #1f2327;
             transition: all 0.15s ease;
             color: #e5e7eb;
+            overflow: visible;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+        input.form-input {
+            min-height: 38px;
+            height: auto;
         }
         .form-input:focus {
             background: #252a2f;
@@ -79,10 +86,12 @@
             <!-- Header -->
             <div class="document-container rounded mb-1">
                 <div class="text-center py-10 px-8">
-                    <img src="https://i.imgur.com/ngOEnwW.png" 
-                         alt="LSFD" 
-                         style="width: 600px; height: auto;" 
-                         class="mx-auto mb-6 opacity-90">
+                    <a href="index.html">
+                        <img src="https://i.imgur.com/ngOEnwW.png" 
+                             alt="LSFD" 
+                             style="width: 600px; height: auto; cursor: pointer;" 
+                             class="mx-auto mb-6 opacity-90">
+                    </a>
                     <h1 class="text-xl font-semibold text-gray-900 tracking-tight">NATIONAL FIRE INCIDENT REPORTING SYSTEM</h1>
                     <h2 class="text-base text-gray-600 mt-1 font-medium">NFIRS-4 Civilian Fire Casualty Module</h2>
                 </div>
