@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFIRS Form Sistemi</title>
+
+    <link rel="icon" type="image/png" href="https://i.imgur.com/niSY7Na.png">
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/niSY7Na.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: -0.01em;
+            background-color: #1a1d21;
+        }
+        .document-container {
+            background: #2A2E33;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .field-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #e5e7eb;
+        }
+        .form-card {
+            background: #2A2E33;
+            border: 2px solid #3f444a;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(153, 27, 27, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .form-card:hover::before {
+            left: 100%;
+        }
+        .form-card:hover {
+            border-color: #991b1b;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(153, 27, 27, 0.3);
+        }
+        .form-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #991b1b, #7f1d1d);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 12px rgba(153, 27, 27, 0.4);
+        }
+        .text-gray-900 { color: #f3f4f6 !important; }
+        .text-gray-600 { color: #d1d5db !important; }
+        .text-gray-700 { color: #d1d5db !important; }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4" style="background-color: #1a1d21;">
+    <div class="min-h-screen py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Header -->
+            <div class="document-container rounded mb-8">
+                <div class="text-center py-12 px-8">
+                    <img src="https://i.imgur.com/ngOEnwW.png" 
+                         alt="LSFD" 
+                         style="width: 600px; height: auto;" 
+                         class="mx-auto mb-8 opacity-90">
+                    <h1 class="text-3xl font-semibold text-gray-900 tracking-tight mb-3">NATIONAL FIRE INCIDENT REPORTING SYSTEM</h1>
+                    <h2 class="text-lg text-gray-600 font-medium">BBCode Form Oluşturucu</h2>
+                    <p class="text-sm text-gray-700 mt-4 max-w-2xl mx-auto">Aşağıdan oluşturmak istediğiniz NFIRS formunu seçin</p>
+                </div>
+            </div>
+
+            <!-- Form Selection Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                
+                <!-- NFIRS-1 Basic -->
+                <div class="form-card rounded-lg p-8" onclick="window.location.href='nfirs-1-basic.html'">
+                    <div class="form-icon">1</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center">NFIRS-1 Basic Module</h3>
+                    <p class="text-sm text-gray-700 text-center mb-4">Temel Yangın Olay Raporu</p>
+                    <div class="border-t border-gray-600 pt-4 mt-4">
+                        <ul class="text-xs text-gray-600 space-y-2">
+                            <li>• Olay temel bilgileri</li>
+                            <li>• Yönelen birimler ve zamanlar</li>
+                            <li>• Alınan aksiyonlar</li>
+                            <li>• Yangın kaynağı ve detayları</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NFIRS-3 Structure Fire -->
+                <div class="form-card rounded-lg p-8" onclick="window.location.href='nfirs-3-structure.html'">
+                    <div class="form-icon">3</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center">NFIRS-3 Structure Fire Module</h3>
+                    <p class="text-sm text-gray-700 text-center mb-4">Yapısal Yangın Detay Raporu</p>
+                    <div class="border-t border-gray-600 pt-4 mt-4">
+                        <ul class="text-xs text-gray-600 space-y-2">
+                            <li>• Yapı türü ve malzemesi</li>
+                            <li>• Yangın yayılımı ve hasar boyutu</li>
+                            <li>• Dedektör ve yağmurlama sistemi</li>
+                            <li>• Isı kaynağı ve insani faktörler</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NFIRS-4 Civilian Casualty -->
+                <div class="form-card rounded-lg p-8" onclick="window.location.href='nfirs-4-civilian.html'">
+                    <div class="form-icon">4</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center">NFIRS-4 Civilian Fire Casualty</h3>
+                    <p class="text-sm text-gray-700 text-center mb-4">Sivil Yaralı/Kayıp Raporu</p>
+                    <div class="border-t border-gray-600 pt-4 mt-4">
+                        <ul class="text-xs text-gray-600 space-y-2">
+                            <li>• Kazazede bilgileri</li>
+                            <li>• Yaralanma ciddiyeti ve türü</li>
+                            <li>• Etkilenen vücut bölgesi</li>
+                            <li>• Sağlanan tedavi ve nakil bilgisi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NFIRS-5 Fire Service Casualty -->
+                <div class="form-card rounded-lg p-8" onclick="window.location.href='nfirs-5-service.html'">
+                    <div class="form-icon">5</div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center">NFIRS-5 Fire Service Casualty</h3>
+                    <p class="text-sm text-gray-700 text-center mb-4">İtfaiyeci Yaralı/Kayıp Raporu</p>
+                    <div class="border-t border-gray-600 pt-4 mt-4">
+                        <ul class="text-xs text-gray-600 space-y-2">
+                            <li>• İtfaiyeci bilgileri ve rütbesi</li>
+                            <li>• Yaralanma sırasında yapılan eylem</li>
+                            <li>• Kişisel koruyucu ekipman durumu</li>
+                            <li>• Ekipman performansı</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Info Box -->
+            <div class="document-container rounded p-6">
+                <div class="text-center">
+                    <h3 class="field-label mb-3">SİSTEM BİLGİSİ</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Bu sistem, Los Santos Fire Department için NFIRS (National Fire Incident Reporting System) formlarını 
+                        BBCode formatında oluşturmanıza yardımcı olur. Her form, ilgili olay türüne özel detaylı bilgileri içerir 
+                        ve forum paylaşımı için optimize edilmiştir.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mt-8 py-4">
+                <p class="text-xs text-gray-600 opacity-50">© 2025 evcleia - GTA-W:TR, Los Santos Fire Department oluşumunun kullanımı için tasarlanmıştır, tamamen IC amaçlar doğrultusunda kullanılmalıdır.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle hover sound effect (optional)
+        document.querySelectorAll('.form-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+    </script>
+</body>
+</html>
