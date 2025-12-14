@@ -339,7 +339,75 @@
             const formuDolduran = document.getElementById('formuDolduran').value;
             const formTarihi = document.getElementById('formTarihi').value;
 
-            const bbcode = `[center][size=125]UNITED STATES FIRE ADMINISTRATION  [b]NATIONAL FIRE INCIDENT REPORTING SYSTEM (NFIRS-3 STRUCTURE FIRE)[/b][/size][/center]  [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI TÜRÜ[/b] ${getCheckbox('yapiTuru', 'mustakil')} Müstakil ev. ${getCheckbox('yapiTuru', 'apartman')} Apartman. ${getCheckbox('yapiTuru', 'dukkan')} Dükkan. ${getCheckbox('yapiTuru', 'endustriyel')} Endüstriyel. ${getCheckbox('yapiTuru', 'diger')} Diğer: [size=85]${yapiTuruDiger}[/size] [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI DURUMU[/b] ${getCheckbox('yapiDurumu', 'kullanimda')} Kullanımda. ${getCheckbox('yapiDurumu', 'bos')} Boş. ${getCheckbox('yapiDurumu', 'insaat')} İnşaat/Tadilat halinde. ${getCheckbox('yapiDurumu', 'harabe')} Harabe. [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI MALZEMESİ[/b] ${getCheckbox('yapiMalzemesi', 'ahsap')} Ahşap çerçeve. ${getCheckbox('yapiMalzemesi', 'tugla')} Tuğla. ${getCheckbox('yapiMalzemesi', 'celik')} Çelik. ${getCheckbox('yapiMalzemesi', 'beton')} Beton. ${getCheckbox('yapiMalzemesi', 'karisik')} Karışık. ${getCheckbox('yapiMalzemesi', 'diger')} Diğer: [size=85]${yapiMalzemesiDiger}[/size] [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]KAT SAYISI[/b] ${katSayisi}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGININ BAŞLADIĞI ODA[/b] ${yanginOda}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGININ YAYILIMI[/b] ${yanginYayilimi}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ALEV HASARININ BOYUTU[/b] ${alevHasari}[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGIN DEDEKTÖRÜ[/b] ${getCheckbox('dedektor', 'uyardi')} Dedektör kazazedeleri uyardı. ${getCheckbox('dedektor', 'uyarmadi')} Dedektör herhangi bir uyarı yapmadı. ${getCheckbox('dedektor', 'bilinmiyor')} Bilinmiyor.[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAĞMURLAMA SİSTEMİ[/b] ${getCheckbox('yagmurlama', 'mudahale')} Yağmurlama sistemi yangına müdahale etti. ${getCheckbox('yagmurlama', 'basarisiz')} Yağmurlama sistemi yangına müdahale ettiyse de başarısız oldu.  ${getCheckbox('yagmurlama', 'etmedi')} Yağmurlama sistemi yangına müdahale etmedi. ${getCheckbox('yagmurlama', 'bilinmiyor')} Bilinmiyor.  [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ISI KAYNAĞI[/b] ${isiKaynagi}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İLK TUTUŞAN NESNE[/b] ${tutusanNesne}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İNSANİ FAKTÖRLER[/b] ${insaniFaktorler}[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]HAZMAT VARLIĞI[/b] ${hazmat}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPISAL DEĞİŞİKLİKLER[/b] ${yapisalDegisiklik}[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY ANLATISI VE EK BİLGİLENDİRMELER[/b] ${olayAnlatisi}[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY KOMUTANI[/b] ${olayKomutani}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORMU DOLDURAN[/b] ${formuDolduran}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORM TARİHİ[/b] ${formTarihi}[/indent][/size][/tdwidth]`;
+            const bbcode = `[center][size=125]UNITED STATES FIRE ADMINISTRATION
+[b]NATIONAL FIRE INCIDENT REPORTING SYSTEM (NFIRS-3 STRUCTURE FIRE)[/b][/size][/center]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI TÜRÜ[/b]
+${getCheckbox('yapiTuru', 'mustakil')} Müstakil ev.
+${getCheckbox('yapiTuru', 'apartman')} Apartman.
+${getCheckbox('yapiTuru', 'dukkan')} Dükkan.
+${getCheckbox('yapiTuru', 'endustriyel')} Endüstriyel.
+${getCheckbox('yapiTuru', 'diger')} Diğer: ${yapiTuruDiger}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI DURUMU[/b]
+${getCheckbox('yapiDurumu', 'kullanimda')} Kullanımda.
+${getCheckbox('yapiDurumu', 'bos')} Boş.
+${getCheckbox('yapiDurumu', 'insaat')} İnşaat/Tadilat halinde.
+${getCheckbox('yapiDurumu', 'harabe')} Harabe.[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPI MALZEMESİ[/b]
+${getCheckbox('yapiMalzemesi', 'ahsap')} Ahşap çerçeve.
+${getCheckbox('yapiMalzemesi', 'tugla')} Tuğla.
+${getCheckbox('yapiMalzemesi', 'celik')} Çelik.
+${getCheckbox('yapiMalzemesi', 'beton')} Beton.
+${getCheckbox('yapiMalzemesi', 'karisik')} Karışık.
+${getCheckbox('yapiMalzemesi', 'diger')} Diğer: ${yapiMalzemesiDiger}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]KAT SAYISI[/b]
+${katSayisi}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGININ BAŞLADIĞI ODA[/b]
+${yanginOda}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGININ YAYILIMI[/b]
+${yanginYayilimi}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ALEV HASARININ BOYUTU[/b]
+${alevHasari}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YANGIN DEDEKTÖRÜ[/b]
+${getCheckbox('dedektor', 'uyardi')} Dedektör kazazedeleri uyardı.
+${getCheckbox('dedektor', 'uyarmadi')} Dedektör herhangi bir uyarı yapmadı.
+${getCheckbox('dedektor', 'bilinmiyor')} Bilinmiyor.[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAĞMURLAMA SİSTEMİ[/b]
+${getCheckbox('yagmurlama', 'mudahale')} Yağmurlama sistemi yangına müdahale etti.
+${getCheckbox('yagmurlama', 'basarisiz')} Yağmurlama sistemi yangına müdahale ettiyse de başarısız oldu.
+${getCheckbox('yagmurlama', 'etmedi')} Yağmurlama sistemi yangına müdahale etmedi.
+${getCheckbox('yagmurlama', 'bilinmiyor')} Bilinmiyor.[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ISI KAYNAĞI[/b]
+${isiKaynagi}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İLK TUTUŞAN NESNE[/b]
+${tutusanNesne}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İNSANİ FAKTÖRLER[/b]
+${insaniFaktorler}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]HAZMAT VARLIĞI[/b]
+${hazmat}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YAPISAL DEĞİŞİKLİKLER[/b]
+${yapisalDegisiklik}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY ANLATISI VE EK BİLGİLENDİRMELER[/b]
+${olayAnlatisi}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY KOMUTANI[/b]
+${olayKomutani}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORMU DOLDURAN[/b]
+${formuDolduran}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORM TARİHİ[/b]
+${formTarihi}[/indent][/size][/tdwidth]`;
 
             document.getElementById('output').value = bbcode;
             document.getElementById('outputContainer').classList.remove('hidden');

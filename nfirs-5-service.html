@@ -319,7 +319,58 @@
             const formuDolduran = document.getElementById('formuDolduran').value;
             const formTarihi = document.getElementById('formTarihi').value;
 
-            const bbcode = `[center][size=125]UNITED STATES FIRE ADMINISTRATION  [b]NATIONAL FIRE INCIDENT REPORTING SYSTEM (NFIRS-5 FIRE SERVICE CASUALTY)[/b][/size][/center]  [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İTFAİYECİNİN ADI[/b] ${itfaiyeciAdi}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]RÜTBESİ[/b] ${rutbe} [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]CİNSİYETİ[/b] ${getCheckbox('cinsiyet', 'kadin')} Kadın / ${getCheckbox('cinsiyet', 'erkek')} Erkek[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA CİDDİYETİ[/b] ${getCheckbox('ciddiyet', 'hafif')} Hafif / ${getCheckbox('ciddiyet', 'orta')} Orta / ${getCheckbox('ciddiyet', 'ciddi')} Ciddi / ${getCheckbox('ciddiyet', 'olu')} Ölü [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA TÜRÜ[/b] ${yaralanmaTuru}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ETKİLENEN VÜCUT BÖLGESİ[/b] ${getCheckbox('vucutBolgesi', 'bas')} Baş / ${getCheckbox('vucutBolgesi', 'govde')} Gövde / ${getCheckbox('vucutBolgesi', 'kolbacak')} Kollar ve Bacaklar /  ${getCheckbox('vucutBolgesi', 'coklu')} Çoklu / ${getCheckbox('vucutBolgesi', 'diger')} Diğer: [size=85] ${vucutBolgesiDiger} [/size][/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA NEDENİ[/b] ${yaralanmaNedeni} [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA SIRASINDA YAPILAN SPESİFİK EYLEM[/b] ${spesifikEylem}  [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]GÖREVLENDİRME[/b] ${gorevlendirme}  [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY YERİNDEKİ KONUMU[/b] ${konum}  [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]KİŞİSEL KORUYUCU EKİPMAN GİYDİ Mİ?[/b] ${getCheckbox('ppe', 'evet')} Evet / ${getCheckbox('ppe', 'hayir')} Hayır  [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]EKİPMAN PERFORMANSI[/b] ${getCheckbox('ekipmanPerformans', 'duzgun')} Düzgün Çalıştı / ${getCheckbox('ekipmanPerformans', 'arizalandi')} Arızalandı / ${getCheckbox('ekipmanPerformans', 'gecersiz')} Geçerli Değil.  [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]SAĞLANAN TEDAVİ[/b] ${tedavi} [/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]NAKLEDİLEN SAĞLIK KURUMU[/b] ${saglikKurumu}  [/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY ANLATISI VE EK BİLGİLENDİRMELER[/b] ${olayAnlatisi}[/indent][/size][/tdwidth][/table] [table=#d0dade,white][tr] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY KOMUTANI[/b] ${olayKomutani}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORMU DOLDURAN[/b] ${formuDolduran}[/indent][/size][/tdwidth] [tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORM TARİHİ[/b] ${formTarihi}[/indent][/size][/tdwidth]`;
+            const bbcode = `[center][size=125]UNITED STATES FIRE ADMINISTRATION
+[b]NATIONAL FIRE INCIDENT REPORTING SYSTEM (NFIRS-5 FIRE SERVICE CASUALTY)[/b][/size][/center]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]İTFAİYECİNİN ADI[/b]
+${itfaiyeciAdi}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]RÜTBESİ[/b]
+${rutbe}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]CİNSİYETİ[/b]
+${getCheckbox('cinsiyet', 'kadin')} Kadın / ${getCheckbox('cinsiyet', 'erkek')} Erkek[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA CİDDİYETİ[/b]
+${getCheckbox('ciddiyet', 'hafif')} Hafif / ${getCheckbox('ciddiyet', 'orta')} Orta / ${getCheckbox('ciddiyet', 'ciddi')} Ciddi / ${getCheckbox('ciddiyet', 'olu')} Ölü[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA TÜRÜ[/b]
+${yaralanmaTuru}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]ETKİLENEN VÜCUT BÖLGESİ[/b]
+${getCheckbox('vucutBolgesi', 'bas')} Baş / ${getCheckbox('vucutBolgesi', 'govde')} Gövde / ${getCheckbox('vucutBolgesi', 'kolbacak')} Kollar ve Bacaklar / ${getCheckbox('vucutBolgesi', 'coklu')} Çoklu / ${getCheckbox('vucutBolgesi', 'diger')} Diğer: [size=85]${vucutBolgesiDiger}[/size][/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA NEDENİ[/b]
+${yaralanmaNedeni}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]YARALANMA SIRASINDA YAPILAN SPESİFİK EYLEM[/b]
+${spesifikEylem}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]GÖREVLENDİRME[/b]
+${gorevlendirme}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY YERİNDEKİ KONUMU[/b]
+${konum}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]KİŞİSEL KORUYUCU EKİPMAN GİYDİ Mİ?[/b]
+${getCheckbox('ppe', 'evet')} Evet / ${getCheckbox('ppe', 'hayir')} Hayır[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]EKİPMAN PERFORMANSI[/b]
+${getCheckbox('ekipmanPerformans', 'duzgun')} Düzgün Çalıştı / ${getCheckbox('ekipmanPerformans', 'arizalandi')} Arızalandı / ${getCheckbox('ekipmanPerformans', 'gecersiz')} Geçerli Değil.[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]SAĞLANAN TEDAVİ[/b]
+${tedavi}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]NAKLEDİLEN SAĞLIK KURUMU[/b]
+${saglikKurumu}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY ANLATISI VE EK BİLGİLENDİRMELER[/b]
+${olayAnlatisi}[/indent][/size][/tdwidth][/table]
+
+[table=#d0dade,white][tr]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]OLAY KOMUTANI[/b]
+${olayKomutani}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORMU DOLDURAN[/b]
+${formuDolduran}[/indent][/size][/tdwidth]
+[tdwidth=#d0dade,#ffffff,top,left,2,1][size=85][indent=2][b]FORM TARİHİ[/b]
+${formTarihi}[/indent][/size][/tdwidth]`;
 
             document.getElementById('output').value = bbcode;
             document.getElementById('outputContainer').classList.remove('hidden');
